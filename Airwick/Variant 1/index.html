@@ -13,6 +13,7 @@
         <section class="newsletter__top">
           <div class="newsletter__content">
             <h2 class="newsletter__title">Join our Air Wick community today</h2>
+
             <p class="newsletter__description">
               Sign up if you want to receive emails about our products, values,
               partnerships, promotions and discounts from Reckitt. See our
@@ -21,6 +22,7 @@
               >
             </p>
           </div>
+
           <div class="newsletter__form-wrapper">
             <form
               method="post"
@@ -30,70 +32,118 @@
               enctype="multipart/form-data"
               class="newsletter__form"
             >
+              <!-- data from lovelask created form provided campagin id 7012p000001fU7fAAE -->
+
+              <input type="hidden" name="oid" value="00D1w0000000Pnu" />
+
               <input
                 type="hidden"
+                name="retURL"
+                value="https://www.airwick.co.uk/products/electrical-plug-ins/?t=x"
+              />
+
+              <input
+                type="hidden"
+                name="Campaign_ID"
+                value="7012p000001fU7fAAE"
+              />
+
+              <input
+                type="hidden"
+                name="00N1t000006Lix3"
+                value="https://www.airwick.co.uk/products/electrical-plug-ins"
+              />
+
+              <input type="hidden" name="00N1t000004KaS4" value="UK" />
+
+              <input type="hidden" name="00N1t000005NSkg" value="Air Wick" />
+
+              <input
+                type="hidden"
+                name="00N1t00000DpczG"
+                value="airwick newsletter"
+              />
+
+              <input type="hidden" name="externalApi" value="False" />
+
+              <input type="hidden" name="apiProviderName" value="" />
+
+              <!-- data from existing form in Airwick -->
+
+              <!-- <input
                 name=":formstart"
+                type="hidden"
                 value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
                 tabindex="-1"
               />
 
               <input
-                type="hidden"
                 name="_charset_"
+                type="hidden"
                 value="utf-8"
                 tabindex="-1"
               />
 
               <input
-                type="hidden"
                 name=":redirect"
+                type="hidden"
                 value="/content/airwick/uk/en_UK/thank-you-page.html"
                 tabindex="-1"
               />
 
               <input
-                type="hidden"
                 name="formType"
+                type="hidden"
                 value="mulesoft"
                 tabindex="-1"
               />
 
               <input
-                type="hidden"
                 name="currentContainer"
+                type="hidden"
                 value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
                 tabindex="-1"
-              />
+              /> -->
+
+              <!-- visible inputs -->
 
               <input
-                type="text"
-                data-cmp-hook-form-text="input"
                 name="firstName"
+                class="newsletter__input"
+                type="text"
+                data-val-regex="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
+                data-val-length-max="50"
+                data-val="true"
+                data-val-required
+                data-cmp-hook-form-text="input"
                 id="form-text-name"
                 aria-label="First name"
                 placeholder="First name"
-                class="newsletter__input"
                 required
                 tabindex="-1"
               />
 
               <input
+                name="lastName"
                 type="hidden"
                 data-cmp-hook-form-text="input"
                 aria-label="Last name"
                 type="text"
                 value="Not Provided"
                 id="form-text-last-name"
-                name="lastName"
                 tabindex="-1"
               />
 
               <input
-                data-cmp-hook-form-text="input"
-                type="email"
-                value=""
-                id="form-email"
                 name="email"
+                data-cmp-hook-form-text="input"
+                data-val-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                data-val-length-max="50"
+                data-val-email
+                data-val-required
+                data-val="true"
+                type="email"
+                id="form-email"
                 aria-label="Email*"
                 placeholder="Email*"
                 required
@@ -102,16 +152,18 @@
               />
 
               <input
-                type="submit"
                 name="Signup"
+                type="submit"
                 id="form-submit"
                 aria-label="Sign Up"
                 value="Sign Up"
                 class="newsletter__btn"
+                tabindex="-1"
               />
             </form>
           </div>
         </section>
+
         <section class="newsletter__bottom">
           <p class="newsletter__description newsletter__description--lds">
             These terms and any marketing communication you receive from RB UK
