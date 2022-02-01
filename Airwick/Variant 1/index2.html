@@ -32,55 +32,6 @@
               enctype="multipart/form-data"
               class="newsletter__form"
             >
-              <!--  ----------------------------------------------------------------------  -->
-              <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-              <!--  these lines if you wish to test in debug mode.                          -->
-              <input type="hidden" name="debug" value="1" />
-              <input
-                type="hidden"
-                name="debugEmail"
-                value="bartek.kawecki@sobre.pl"
-              />
-              <!--  ----------------------------------------------------------------------  -->
-
-              <!-- data from lovelask created form provided campagin id 7012p000001fU7fAAE -->
-              <!-- 
-              <input type="hidden" name="oid" value="00D1w0000000Pnu" />
-
-              <input
-                type="hidden"
-                name="retURL"
-                value="https://www.airwick.co.uk/products/electrical-plug-ins/?t=x"
-              />
-
-              <input
-                type="hidden"
-                name="Campaign_ID"
-                value="7012p000001fU7fAAE"
-              />
-
-              <input
-                type="hidden"
-                name="00N1t000006Lix3"
-                value="https://www.airwick.co.uk/products/electrical-plug-ins"
-              />
-
-              <input type="hidden" name="00N1t000004KaS4" value="UK" />
-
-              <input type="hidden" name="00N1t000005NSkg" value="Air Wick" />
-
-              <input
-                type="hidden"
-                name="00N1t00000DpczG"
-                value="airwick newsletter"
-              />
-
-              <input type="hidden" name="externalApi" value="False" />
-
-              <input type="hidden" name="apiProviderName" value="" /> -->
-
-              <!-- data from existing form in Airwick -->
-
               <input
                 name=":formstart"
                 type="hidden"
@@ -119,29 +70,29 @@
               <!-- visible inputs -->
 
               <input
-                name="first_name"
-                class="newsletter__input"
-                id="first_name"
-                maxlength="40"
+                name="firstName"
+                data-cmp-hook-form-text="input"
+                aria-label="First name"
                 type="text"
+                id="form-text-1577655013"
+                tabindex="-1"
+                class="newsletter__input"
+                maxlength="40"
                 data-val-regex="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
                 data-val-length-max="40"
                 data-val="true"
                 data-val-required
                 data-cmp-hook-form-text="input"
-                aria-label="First name"
                 placeholder="First name"
                 required
-                tabindex="-1"
               />
 
               <input
-                name="last_name"
-                type="hidden"
-                id="last_name"
                 data-cmp-hook-form-text="input"
                 aria-label="Last name"
-                type="text"
+                id="form-text-344249043"
+                name="lastName"
+                type="hidden"
                 value="Not Provided"
                 tabindex="-1"
               />
@@ -150,27 +101,41 @@
                 name="email"
                 id="email"
                 data-cmp-hook-form-text="input"
+                aria-label="E-mail*"
+                id="form-text-1129317679"
                 data-val-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                 data-val-length-max="50"
                 data-val-email
                 data-val-required
                 data-val="true"
                 type="email"
-                aria-label="Email*"
                 placeholder="Email*"
                 required
                 class="newsletter__input newsletter__input--email"
+              />
+
+              <input
+                type="hidden"
+                id="form-hidden-1718356016"
+                name="legalDocumentsID"
+                value="a042p00000yjm45AAA"
+                tabindex="-1"
+              />
+
+              <input
+                type="hidden"
+                id="form-hidden-1991812436"
+                name="sourceChannel"
                 tabindex="-1"
               />
 
               <input
                 name="Signup"
                 type="submit"
-                id="form-submit"
+                id="footer-newsletter"
                 aria-label="Sign Up"
                 value="Sign Up"
                 class="newsletter__btn"
-                tabindex="-1"
               />
             </form>
           </div>
