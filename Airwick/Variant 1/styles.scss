@@ -9,10 +9,22 @@
 .cmp-list__wrapper.newsletter-wrapper {
   background: rgb(245, 243, 242);
   padding: 24px 15px;
+  min-height: 625px;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (min-width: 568px) {
+    min-height: 530px;
+  }
+
+  @media only screen and (min-width: 767px) {
+    min-height: 435px;
+  }
 
   @media only screen and (min-width: 992px) {
     padding-left: 0px;
     padding-right: 0px;
+    min-height: 366px;
   }
 
   .newsletter {
