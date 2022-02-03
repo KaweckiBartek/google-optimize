@@ -1,6 +1,6 @@
 const signUpContainer = document.querySelector("#sign-up");
 const thankYouContainer = document.querySelector("#thank-you");
-const submitBtn = document.querySelector("#footer-newsletter");
+const form = document.querySelector(".newsletter__form");
 
 const showThankYou = (e) => {
   e.preventDefault();
@@ -8,4 +8,4 @@ const showThankYou = (e) => {
   thankYouContainer.classList.remove("display-none");
 };
 
-submitBtn.addEventListener("click", showThankYou);
+form.addEventListener("submit", showThankYou);

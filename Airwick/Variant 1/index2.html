@@ -11,7 +11,6 @@
   <body>
     <div class="cmp-list__wrapper newsletter-wrapper">
       <div class="container newsletter">
-        <!-- <div id="sign-up" class="sign-up"> -->
         <div id="sign-up" class="sign-up">
           <section class="newsletter__top">
             <div class="newsletter__content">
@@ -61,12 +60,12 @@
                   tabindex="-1"
                 /> -->
 
-                <!-- <input
+                <input
                   name="formType"
                   type="hidden"
                   value="mulesoft"
                   tabindex="-1"
-                /> -->
+                />
 
                 <input
                   name="currentContainer"
@@ -79,19 +78,16 @@
 
                 <input
                   name="firstName"
-                  data-cmp-hook-form-text="input"
-                  aria-label="First name"
-                  type="text"
-                  id="form-text-1577655013"
-                  tabindex="-1"
-                  class="newsletter__input"
-                  maxlength="40"
-                  data-val-regex="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
-                  data-val-length-max="40"
-                  data-val="true"
-                  data-val-required
-                  data-cmp-hook-form-text="input"
                   placeholder="First name"
+                  aria-label="First name"
+                  data-cmp-hook-form-text="input"
+                  id="form-text-1577655013"
+                  class="newsletter__input"
+                  type="text"
+                  pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
+                  maxlength="40"
+                  title="Imię"
+                  minlength="8"
                   required
                 />
 
@@ -107,19 +103,17 @@
 
                 <input
                   name="email"
-                  id="email"
-                  data-cmp-hook-form-text="input"
-                  aria-label="E-mail*"
-                  id="form-text-1129317679"
-                  data-val-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                  data-val-length-max="50"
-                  data-val-email
-                  data-val-required
-                  data-val="true"
-                  type="email"
                   placeholder="Email*"
-                  required
+                  aria-label="E-mail*"
+                  data-cmp-hook-form-text="input"
+                  id="form-text-1129317679"
                   class="newsletter__input newsletter__input--email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  title="Błędny format e-mail"
+                  type="email"
+                  maxlength="70"
+                  minlength="8"
+                  required
                 />
 
                 <input
@@ -162,7 +156,6 @@
         </div>
         <div id="thank-you" class="thank-you display-none">
           <div class="thank-you__content">
-            <!-- <div class="thank-you__content display-none"> -->
             <h2 class="newsletter__title newsletter__title--thank-you">
               Thanks 💚 for signing up to our newsletter and welcome to our Air
               Wick community

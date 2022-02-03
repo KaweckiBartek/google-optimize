@@ -6,186 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airvick variant 1</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="main.js" defer></script>
   </head>
   <body>
     <div class="cmp-list__wrapper newsletter-wrapper">
       <div class="container newsletter">
-        <section class="newsletter__top">
-          <div class="newsletter__content">
-            <h2 class="newsletter__title">Join our Air Wick community today</h2>
+        <!-- <div id="sign-up" class="sign-up"> -->
+        <div id="sign-up" class="sign-up">
+          <section class="newsletter__top">
+            <div class="newsletter__content">
+              <h2 class="newsletter__title">
+                Join our Air Wick community today
+              </h2>
 
-            <p class="newsletter__description">
-              Sign up if you want to receive emails about our products, values,
-              partnerships, promotions and discounts from Reckitt. See our
-              <a href="https://www.airwick.co.uk/privacy-policy" target="_blank"
-                >Privacy Policy</a
+              <p class="newsletter__description">
+                Sign up if you want to receive emails about our products,
+                values, partnerships, promotions and discounts from Reckitt. See
+                our
+                <a
+                  href="https://www.airwick.co.uk/privacy-policy"
+                  target="_blank"
+                  >Privacy Policy</a
+                >
+              </p>
+            </div>
+
+            <div class="newsletter__form-wrapper">
+              <form
+                method="post"
+                action="https://www.airwick.co.uk"
+                id="new_form"
+                name="new_form"
+                enctype="multipart/form-data"
+                class="newsletter__form"
               >
+                <input
+                  name=":formstart"
+                  type="hidden"
+                  value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
+                  tabindex="-1"
+                />
+
+                <input
+                  name="_charset_"
+                  type="hidden"
+                  value="utf-8"
+                  tabindex="-1"
+                />
+
+                <!-- <input
+                  name=":redirect"
+                  type="hidden"
+                  value="/content/airwick/uk/en_UK/thank-you-page.html"
+                  tabindex="-1"
+                /> -->
+
+                <!-- <input
+                  name="formType"
+                  type="hidden"
+                  value="mulesoft"
+                  tabindex="-1"
+                /> -->
+
+                <input
+                  name="currentContainer"
+                  type="hidden"
+                  value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
+                  tabindex="-1"
+                />
+
+                <!-- visible inputs -->
+
+                <input
+                  name="firstName"
+                  data-cmp-hook-form-text="input"
+                  aria-label="First name"
+                  type="text"
+                  id="form-text-1577655013"
+                  tabindex="-1"
+                  class="newsletter__input"
+                  maxlength="40"
+                  data-val-regex="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
+                  data-val-length-max="40"
+                  data-val="true"
+                  data-val-required
+                  data-cmp-hook-form-text="input"
+                  placeholder="First name"
+                  required
+                />
+
+                <input
+                  data-cmp-hook-form-text="input"
+                  aria-label="Last name"
+                  id="form-text-344249043"
+                  name="lastName"
+                  type="hidden"
+                  value="Not Provided"
+                  tabindex="-1"
+                />
+
+                <input
+                  name="email"
+                  id="email"
+                  data-cmp-hook-form-text="input"
+                  aria-label="E-mail*"
+                  id="form-text-1129317679"
+                  data-val-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                  data-val-length-max="50"
+                  data-val-email
+                  data-val-required
+                  data-val="true"
+                  type="email"
+                  placeholder="Email*"
+                  required
+                  class="newsletter__input newsletter__input--email"
+                />
+
+                <input
+                  type="hidden"
+                  id="form-hidden-1718356016"
+                  name="legalDocumentsID"
+                  value="a042p00000yjm45AAA"
+                  tabindex="-1"
+                />
+
+                <input
+                  type="hidden"
+                  id="form-hidden-1991812436"
+                  name="sourceChannel"
+                  tabindex="-1"
+                />
+
+                <input
+                  name="Signup"
+                  type="submit"
+                  id="footer-newsletter"
+                  aria-label="Sign Up"
+                  value="Sign Up"
+                  class="newsletter__btn"
+                />
+              </form>
+            </div>
+          </section>
+
+          <section class="newsletter__bottom">
+            <p class="newsletter__description newsletter__description--lds">
+              These terms and any marketing communication you receive from RB UK
+              Hygiene Home Commercial Limited do not constitute an intention,
+              solicitation, offer, request or requirement to sell Air Wick
+              products to you. Any communications you receive from us shall be
+              for marketing purposes only. By signing up you confirm that you
+              have read and agree to our Terms and Conditions.
+            </p>
+          </section>
+        </div>
+        <div id="thank-you" class="thank-you display-none">
+          <div class="thank-you__content">
+            <!-- <div class="thank-you__content display-none"> -->
+            <h2 class="newsletter__title newsletter__title--thank-you">
+              Thanks 💚 for signing up to our newsletter and welcome to our Air
+              Wick community
+            </h2>
+
+            <p
+              class="newsletter__description newsletter__description--thank-you"
+            >
+              Get the latest news, hints and tips from us at Air Wick. We’re
+              committed to bringing you the best fragrance experiences inspired
+              by nature to help transform your home, with the power of
+              fragrance.
             </p>
           </div>
-
-          <div class="newsletter__form-wrapper">
-            <form
-              method="post"
-              action="https://www.airwick.co.uk"
-              id="new_form"
-              name="new_form"
-              enctype="multipart/form-data"
-              class="newsletter__form"
-            >
-              <!--  ----------------------------------------------------------------------  -->
-              <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-              <!--  these lines if you wish to test in debug mode.                          -->
-              <input type="hidden" name="debug" value="1" />
-              <input
-                type="hidden"
-                name="debugEmail"
-                value="bartek.kawecki@sobre.pl"
-              />
-              <!--  ----------------------------------------------------------------------  -->
-
-              <!-- data from lovelask created form provided campagin id 7012p000001fU7fAAE -->
-              <!-- 
-              <input type="hidden" name="oid" value="00D1w0000000Pnu" />
-
-              <input
-                type="hidden"
-                name="retURL"
-                value="https://www.airwick.co.uk/products/electrical-plug-ins/?t=x"
-              />
-
-              <input
-                type="hidden"
-                name="Campaign_ID"
-                value="7012p000001fU7fAAE"
-              />
-
-              <input
-                type="hidden"
-                name="00N1t000006Lix3"
-                value="https://www.airwick.co.uk/products/electrical-plug-ins"
-              />
-
-              <input type="hidden" name="00N1t000004KaS4" value="UK" />
-
-              <input type="hidden" name="00N1t000005NSkg" value="Air Wick" />
-
-              <input
-                type="hidden"
-                name="00N1t00000DpczG"
-                value="airwick newsletter"
-              />
-
-              <input type="hidden" name="externalApi" value="False" />
-
-              <input type="hidden" name="apiProviderName" value="" /> -->
-
-              <!-- data from existing form in Airwick -->
-
-              <input
-                name=":formstart"
-                type="hidden"
-                value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
-                tabindex="-1"
-              />
-
-              <input
-                name="_charset_"
-                type="hidden"
-                value="utf-8"
-                tabindex="-1"
-              />
-
-              <input
-                name=":redirect"
-                type="hidden"
-                value="/content/airwick/uk/en_UK/thank-you-page.html"
-                tabindex="-1"
-              />
-
-              <input
-                name="formType"
-                type="hidden"
-                value="mulesoft"
-                tabindex="-1"
-              />
-
-              <input
-                name="currentContainer"
-                type="hidden"
-                value="/content/experience-fragments/airwick/uk/en/site/footer/master/jcr:content/root/container_1856756809/container_80645228_c/container"
-                tabindex="-1"
-              />
-
-              <!-- visible inputs -->
-
-              <input
-                name="first_name"
-                class="newsletter__input"
-                id="first_name"
-                maxlength="40"
-                type="text"
-                data-val-regex="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,50}$"
-                data-val-length-max="40"
-                data-val="true"
-                data-val-required
-                data-cmp-hook-form-text="input"
-                aria-label="First name"
-                placeholder="First name"
-                required
-                tabindex="-1"
-              />
-
-              <input
-                name="last_name"
-                type="hidden"
-                id="last_name"
-                data-cmp-hook-form-text="input"
-                aria-label="Last name"
-                type="text"
-                value="Not Provided"
-                tabindex="-1"
-              />
-
-              <input
-                name="email"
-                id="email"
-                data-cmp-hook-form-text="input"
-                data-val-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
-                data-val-length-max="50"
-                data-val-email
-                data-val-required
-                data-val="true"
-                type="email"
-                aria-label="Email*"
-                placeholder="Email*"
-                required
-                class="newsletter__input newsletter__input--email"
-                tabindex="-1"
-              />
-
-              <input
-                name="Signup"
-                type="submit"
-                id="form-submit"
-                aria-label="Sign Up"
-                value="Sign Up"
-                class="newsletter__btn"
-                tabindex="-1"
-              />
-            </form>
-          </div>
-        </section>
-
-        <section class="newsletter__bottom">
-          <p class="newsletter__description newsletter__description--lds">
-            These terms and any marketing communication you receive from RB UK
-            Hygiene Home Commercial Limited do not constitute an intention,
-            solicitation, offer, request or requirement to sell Air Wick
-            products to you. Any communications you receive from us shall be for
-            marketing purposes only. By signing up you confirm that you have
-            read and agree to our Terms and Conditions.
-          </p>
-        </section>
+        </div>
       </div>
     </div>
   </body>
