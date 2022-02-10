@@ -4,6 +4,8 @@ const string =
 const falseString =
   "#cdc-form .cdc-form-group .container .row .col-md-12 input,#cdc-form .cdc-form-group .container .row .col-md-3 input,#cdc-form .cdc-form-group .container .row .col-md-4 input,#cdc-form .cdc-form-group .container .row .col-md-6 input{background-color:#F4F8FB}.form a{color:#F4F8FB}.bg--rose{background-color:#D8006D}.form-title{padding-top:40px;padding-left:30px;font-weight:bold;color:#000;font-size:28px}@media only screen and (min-width: 992px){.form-title{paddingssa)-top:0}}";
 
+const script = `const signUpContainer=document.querySelector("#sign-up"),thankYouContainer=document.querySelector("#thank-you"),submitBtn=document.querySelector("#footer-newsletter"),email=document.querySelector("#email"),firstName=document.querySelector("#name"),emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;let emailValid=!1,firstNameValid=!1;const isInputsValid=()=>{emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active")};console.log(hello);const checkInputValue=async(e,a,t)=>{switch(t){case"email":emailValid=!!await e.test(a);break;case"firstName":firstNameValid=!!await e.test(a);break;default:return}await void(emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active"))};email.addEventListener("blur",()=>checkInputValue(emailRegex,email.value,email.name)),firstName.addEventListener("blur",()=>checkInputValue(firstNameRegex,firstName.value,firstName.name));const showThankYou=e=>{e.preventDefault(),signUpContainer.classList.add("display-none"),thankYouContainer.classList.remove("display-none")};submitBtn.addEventListener("click",showThankYou);`;
+
 const bracketPairs = { "[": "]", "{": "}", "(": ")" };
 const closingBrackets = new Set(Object.values(bracketPairs));
 
@@ -33,10 +35,16 @@ const splitString = (str, maxLenght, tagName) => {
     if (bracketsAreBalanced(strr)) {
       part = strr.substr(0, strr.lastIndexOf("}") + 1);
     } else if (!bracketsAreBalanced(strr)) {
-      let part2 = strr.substr(0, strr.lastIndexOf("}") - 1);
-      part = part2.substr(0, part2.lastIndexOf("}") + 1);
+      let partDouble = strr.substr(0, strr.lastIndexOf("}") - 1);
+      part = partDouble.substr(0, partDouble.lastIndexOf("}") + 1);
       if (!bracketsAreBalanced(string)) string = "";
     }
+
+    if (tagName === "script") {
+      if (part.startsWith(";")) part = part.substring(1);
+      if (part.length) part = `${part};`;
+    }
+
     part.length && arr.push(`${openTag}${part}${closeTag}`);
     string = string.substr(part.length, string.length - 1);
   }
@@ -46,12 +54,6 @@ const splitString = (str, maxLenght, tagName) => {
   return arr;
 };
 
-const script = `const signUpContainer=document.querySelector("#sign-up"),thankYouContainer=document.querySelector("#thank-you"),submitBtn=document.querySelector("#footer-newsletter"),email=document.querySelector("#email"),firstName=document.querySelector("#name"),emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;let emailValid=!1,firstNameValid=!1;const isInputsValid=()=>{emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active")};console.log(hello);const checkInputValue=async(e,a,t)=>{switch(t){case"email":emailValid=!!await e.test(a);break;case"firstName":firstNameValid=!!await e.test(a);break;default:return}await void(emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active"))};email.addEventListener("blur",()=>checkInputValue(emailRegex,email.value,email.name)),firstName.addEventListener("blur",()=>checkInputValue(firstNameRegex,firstName.value,firstName.name));const showThankYou=e=>{e.preventDefault(),signUpContainer.classList.add("display-none"),thankYouContainer.classList.remove("display-none")};submitBtn.addEventListener("click",showThankYou);`;
-
-const sss =
-  ".second-banner{margin-top:20px;margin-bottom:20px}#cdc-form .umb-grid + a{margin-top:0;max-width:900px;padding:0;color:#ffffff}#cdc-form .cdc-form-group{max-width:900px;margin:0 auto}#cdc-form .cdc-form-group .umb-grid .grid-section .container{width:100% !important}.cdc-form-group.cdc-form-group--submit{justify-content:flex-start !important";
-
-splitString(string, 500, "style");
-// splitString(script, 500, "script");
+// splitString(string, 500, "style");
+splitString(script, 500, "script");
 // splitString(falseString, 500, "style");
-// splitString(sss, 500, "style");
