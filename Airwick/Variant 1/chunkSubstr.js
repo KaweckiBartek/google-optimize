@@ -46,9 +46,12 @@ const splitString = (str, maxLenght, tagName) => {
   return arr;
 };
 
+const script = `const signUpContainer=document.querySelector("#sign-up"),thankYouContainer=document.querySelector("#thank-you"),submitBtn=document.querySelector("#footer-newsletter"),email=document.querySelector("#email"),firstName=document.querySelector("#name"),emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;let emailValid=!1,firstNameValid=!1;const isInputsValid=()=>{emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active")};console.log(hello);const checkInputValue=async(e,a,t)=>{switch(t){case"email":emailValid=!!await e.test(a);break;case"firstName":firstNameValid=!!await e.test(a);break;default:return}await void(emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active"))};email.addEventListener("blur",()=>checkInputValue(emailRegex,email.value,email.name)),firstName.addEventListener("blur",()=>checkInputValue(firstNameRegex,firstName.value,firstName.name));const showThankYou=e=>{e.preventDefault(),signUpContainer.classList.add("display-none"),thankYouContainer.classList.remove("display-none")};submitBtn.addEventListener("click",showThankYou);`;
+
 const sss =
   ".second-banner{margin-top:20px;margin-bottom:20px}#cdc-form .umb-grid + a{margin-top:0;max-width:900px;padding:0;color:#ffffff}#cdc-form .cdc-form-group{max-width:900px;margin:0 auto}#cdc-form .cdc-form-group .umb-grid .grid-section .container{width:100% !important}.cdc-form-group.cdc-form-group--submit{justify-content:flex-start !important";
 
 splitString(string, 500, "style");
+// splitString(script, 500, "script");
 // splitString(falseString, 500, "style");
 // splitString(sss, 500, "style");
