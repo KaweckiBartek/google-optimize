@@ -6,54 +6,65 @@ const falseString =
 
 const script = `const signUpContainer=document.querySelector("#sign-up"),thankYouContainer=document.querySelector("#thank-you"),submitBtn=document.querySelector("#footer-newsletter"),email=document.querySelector("#email"),firstName=document.querySelector("#name"),emailRegex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;let emailValid=!1,firstNameValid=!1;const isInputsValid=()=>{emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active")};console.log(hello);const checkInputValue=async(e,a,t)=>{switch(t){case"email":emailValid=!!await e.test(a);break;case"firstName":firstNameValid=!!await e.test(a);break;default:return}await void(emailValid&&firstNameValid?submitBtn.classList.add("active"):submitBtn.classList.remove("active"))};email.addEventListener("blur",()=>checkInputValue(emailRegex,email.value,email.name)),firstName.addEventListener("blur",()=>checkInputValue(firstNameRegex,firstName.value,firstName.name));const showThankYou=e=>{e.preventDefault(),signUpContainer.classList.add("display-none"),thankYouContainer.classList.remove("display-none")};submitBtn.addEventListener("click",showThankYou);`;
 
-const bracketPairs = { "[": "]", "{": "}", "(": ")" };
-const closingBrackets = new Set(Object.values(bracketPairs));
-
-function bracketsAreBalanced(text) {
-  const open = []; // stack of (closing) brackets that need to be closed
-  for (char of text) {
-    if (closingBrackets.has(char)) {
-      if (char === open[open.length - 1]) open.pop();
-      else return false;
-    }
-    if (char in bracketPairs) open.push(bracketPairs[char]);
+class SplitCodeToParts {
+  constructor(code, maxLenght, tagName) {
+    this.code = code;
+    this.maxLenght = maxLenght;
+    this.tagName = tagName;
   }
 
-  return open.length ? false : true;
+  isValidBrackets(text) {
+    const bracketPairs = { "[": "]", "{": "}", "(": ")" };
+    const closingBrackets = new Set(Object.values(bracketPairs));
+    const open = []; // stack of (closing) brackets that need to be closed
+    for (const char of text) {
+      if (closingBrackets.has(char)) {
+        if (char === open[open.length - 1]) open.pop();
+        else return false;
+      }
+      if (char in bracketPairs) open.push(bracketPairs[char]);
+    }
+
+    return open.length ? false : true;
+  }
+
+  splitString() {
+    let arr = [];
+    let string = this.code;
+    const openTag = `<${this.tagName}>`;
+    const closeTag = `</${this.tagName}>`;
+
+    while (string.length) {
+      const strr = string.substr(
+        0,
+        this.maxLenght - openTag.length - closeTag.length
+      );
+      let part = "";
+
+      if (this.isValidBrackets(strr)) {
+        part = strr.substr(0, strr.lastIndexOf("}") + 1);
+      } else if (!this.isValidBrackets(strr)) {
+        let partDouble = strr.substr(0, strr.lastIndexOf("}") - 1);
+        part = partDouble.substr(0, partDouble.lastIndexOf("}") + 1);
+        if (!this.isValidBrackets(string)) string = "";
+      }
+
+      if (this.tagName === "script") {
+        if (part.startsWith(";")) part = part.substring(1);
+        if (part.length) part = `${part};`;
+      }
+
+      part.length && arr.push(`${openTag}${part}${closeTag}`);
+      string = string.substr(part.length, string.length - 1);
+    }
+
+    arr.forEach((item) => console.log(item));
+
+    return arr;
+  }
 }
 
-const splitString = (str, maxLenght, tagName) => {
-  let arr = [];
-  let string = str;
-  const openTag = `<${tagName}>`;
-  const closeTag = `</${tagName}>`;
+const style = new SplitCodeToParts(script, 500, "script");
+// const style = new SplitCodeToParts(string, 500, "style");
 
-  while (string.length) {
-    const strr = string.substr(0, maxLenght - openTag.length - closeTag.length);
-    let part = "";
-
-    if (bracketsAreBalanced(strr)) {
-      part = strr.substr(0, strr.lastIndexOf("}") + 1);
-    } else if (!bracketsAreBalanced(strr)) {
-      let partDouble = strr.substr(0, strr.lastIndexOf("}") - 1);
-      part = partDouble.substr(0, partDouble.lastIndexOf("}") + 1);
-      if (!bracketsAreBalanced(string)) string = "";
-    }
-
-    if (tagName === "script") {
-      if (part.startsWith(";")) part = part.substring(1);
-      if (part.length) part = `${part};`;
-    }
-
-    part.length && arr.push(`${openTag}${part}${closeTag}`);
-    string = string.substr(part.length, string.length - 1);
-  }
-
-  arr.forEach((item) => console.log(item));
-
-  return arr;
-};
-
-// splitString(string, 500, "style");
-splitString(script, 500, "script");
-// splitString(falseString, 500, "style");
+style.splitString();
