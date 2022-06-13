@@ -36,6 +36,7 @@ header .nav .last.leaf .join-enfamil.jquery-once-20-processed::before {
 }
 
 .display-none {
+  visibility: none;
   display: none;
 }
 
