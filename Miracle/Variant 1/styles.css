@@ -72,7 +72,7 @@ header .nav .last.leaf .join-enfamil.jquery-once-20-processed::before {
   align-items: center;
 }
 
-.close-button {
+.form-modal .close-button {
   position: absolute;
   right: 32px;
   top: 32px;
@@ -81,11 +81,11 @@ header .nav .last.leaf .join-enfamil.jquery-once-20-processed::before {
   background: transparent;
   border: none;
 }
-.close-button:hover {
+.form-modal .close-button:hover {
   opacity: 0.3;
 }
-.close-button:before,
-.close-button:after {
+.form-modal .close-button:before,
+.form-modal .close-button:after {
   position: absolute;
   left: 15px;
   top: 0;
@@ -95,10 +95,10 @@ header .nav .last.leaf .join-enfamil.jquery-once-20-processed::before {
   background-color: #707070;
   border-radius: 10px;
 }
-.close-button:before {
+.form-modal .close-button:before {
   transform: rotate(45deg);
 }
-.close-button:after {
+.form-modal .close-button:after {
   transform: rotate(-45deg);
 }
 

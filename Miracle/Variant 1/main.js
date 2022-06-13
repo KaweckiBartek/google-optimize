@@ -1,12 +1,12 @@
 const signUpPopUp = document.querySelectorAll(".sign-up");
 const thankYouContainer = document.querySelector("#thank-you");
-const form = document.querySelector(".newsletter-form");
+const form = document.querySelector(".form-modal .newsletter-form");
 const registerButton = document.querySelector("header .nav .last.leaf");
-const closeButton = document.querySelector(".close-button");
+const closeButton = document.querySelector(".form-modal .close-button");
 
 const showThankYou = (e) => {
   e.preventDefault();
-  signUpPopUp.classList.add("display-none");
+  closeFormPopUp();
   thankYouContainer.classList.remove("display-none");
 };
 
