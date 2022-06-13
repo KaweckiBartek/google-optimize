@@ -11,6 +11,34 @@
   }
 }
 
+header .top-box,
+.top-box.visible-xs {
+  display: none !important;
+}
+
+header .nav .last.leaf {
+  background: #ffffff;
+  border: 1px solid #ec198c;
+  border-radius: 43px;
+  padding: 6px 13px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+header .nav .last.leaf .join-enfamil.jquery-once-20-processed,
+header .nav .last.leaf .join-enfamil.jquery-once-20-processed::before {
+  color: #ec198c;
+  filter: invert(20%) sepia(66%) saturate(4518%) hue-rotate(314deg)
+    brightness(94%) contrast(96%);
+}
+
+.display-none {
+  display: none;
+}
+
 .form-modal {
   padding: 40px;
   position: fixed;
