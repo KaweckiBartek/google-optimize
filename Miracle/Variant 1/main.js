@@ -1,6 +1,6 @@
 const signUpPopUp = document.querySelectorAll(".sign-up");
 const thankYouContainer = document.querySelector("#thank-you");
-const form = document.querySelector(".form-modal .newsletter-form");
+const form = document.querySelector(".form-modal .register-form");
 const registerButton = document.querySelector("header .nav .last.leaf");
 const closeButton = document.querySelector(".form-modal .close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
@@ -25,6 +25,12 @@ const showModalFirstTime = () => {
     window.setTimeout(() => showFormPopUp(), 5000);
   }
 };
+
+registerButton.innerHTML = `<a
+                      class="join-enfamil jquery-once-20-processed"
+                      >Register account</a
+                    >
+                    `;
 
 form.addEventListener("submit", showThankYou);
 registerButton.addEventListener("click", showFormPopUp);
