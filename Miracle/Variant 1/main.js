@@ -65,7 +65,7 @@ const showHidenContent = () => {
 
 if (!isLoggedIn) {
   registerButton.innerHTML = `<a
-  class="join-enfamil jquery-once-20-processed"
+  class="join-enfamil jquery-once-20-processed register-btn"
   >Register account</a
   >
   `;
