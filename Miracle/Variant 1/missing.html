@@ -1,0 +1,683 @@
+<style>
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.datepicker.min.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/date/date_popup/themes/jquery.timeentry.css?rcsk4w");
+</style>
+<style>
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/ctools/css/ctools.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/ctools/css/modal.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/panels/css/panels.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/panels/plugins/layouts/onecol/onecol.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/libraries/mmenu/dist/css/jquery.mmenu.all.css?rcsk4w");
+  @import url("https://www.miraclemom.com/sites/all/modules/contrib/responsive_menu/css/responsive_menu.css?rcsk4w");
+</style>
+<style type="text/css">
+  .enrollment-page .module-head-wrapper h1.pane-title {
+    font-family: AvantGardeITCbyBT-Book;
+    color: #ec008c;
+  }
+</style>
+<script type="text/javascript">
+  function init_drupal_core_settings() {
+    jQuery.extend(Drupal.settings, {
+      basePath: "\/",
+      pathPrefix: "",
+      setHasJsCookie: 0,
+      ajaxPageState: {
+        theme: "enfamamain",
+        theme_token: "S8pEV4HGbC8zVu99MJlR9T1L0W68MN0J_Ego_mIRW1M",
+        jquery_version: "1.10",
+        css: {
+          "modules\/system\/system.base.css": 1,
+          "misc\/ui\/jquery.ui.core.css": 1,
+          "misc\/ui\/jquery.ui.theme.css": 1,
+          "misc\/ui\/jquery.ui.datepicker.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/themes\/jquery.timeentry.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_api\/date.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_common\/css\/enfamil_common.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/css\/weight-gain-calc.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/css\/due-date-calculator.css": 1,
+          "modules\/field\/theme\/field.css": 1,
+          "modules\/node\/node.css": 1,
+          "sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css": 1,
+          "sites\/all\/modules\/contrib\/youtube\/css\/youtube.css": 1,
+          "sites\/all\/modules\/contrib\/extlink\/extlink.css": 1,
+          "sites\/all\/modules\/contrib\/views\/css\/views.css": 1,
+          "sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css": 1,
+          "sites\/all\/modules\/contrib\/ctools\/css\/ctools.css": 1,
+          "sites\/all\/modules\/contrib\/ctools\/css\/modal.css": 1,
+          "sites\/all\/modules\/contrib\/panels\/css\/panels.css": 1,
+          "sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/onecol\/onecol.css": 1,
+          "sites\/all\/libraries\/mmenu\/dist\/css\/jquery.mmenu.all.css": 1,
+          "sites\/all\/modules\/contrib\/responsive_menu\/css\/responsive_menu.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/bootstrap-select.min.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/style.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/slick.min.css": 1,
+        },
+        js: {
+          "https:\/\/cdns.gigya.com\/JS\/socialize.js?apikey=3_-mEPgHm8oWxiXfjTlJodLIQTkoNkWTnWYOd1TWcY3erma9BoURk_I4V1hDEhnDfl\u0026lang=en": 1,
+          "public:\/\/google_tag\/global\/google_tag.default.script.js": 1,
+          "misc\/jquery-extend-3.4.0.js": 1,
+          "misc\/jquery-html-prefilter-3.5.0-backport.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.datepicker.min.js": 1,
+          "misc\/ui\/jquery.ui.datepicker-1.13.0-backport.js": 1,
+          "modules\/locale\/locale.datepicker.js": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/jquery.timeentry.pack.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_common\/js\/enfamil_common.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_personalization\/js\/enfamil_personalization.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/js\/enfamil_tools.js": 1,
+          "sites\/all\/modules\/contrib\/extlink\/extlink.js": 1,
+          "misc\/tabledrag.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js": 1,
+          "sites\/all\/modules\/contrib\/ctools\/js\/modal.js": 1,
+          "sites\/all\/modules\/contrib\/gigya\/js\/gigya.js": 1,
+          "sites\/all\/modules\/contrib\/gigya\/js\/gigya.behaviors.js": 1,
+          "sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/date_popup.js": 1,
+          "misc\/tableheader.js": 1,
+          "sites\/all\/modules\/contrib\/field_group\/field_group.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment_form.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment_indenfamama.js": 1,
+          "sites\/all\/libraries\/mmenu\/dist\/js\/jquery.mmenu.all.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/alert.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/carousel.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/collapse.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/dropdown.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/tooltip.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/tab.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/transition.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/carousel-swipe.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/bootstrap-select.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/custom.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/enfamamain.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/slick.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/facebookpixelcode.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/tabledrag.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/modules\/ctools\/js\/modal.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/bootstrap.js": 1,
+          "sites\/all\/modules\/contrib\/responsive_menu\/js\/responsive_menu.config.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js": 1,
+          "misc\/jquery.once.js": 1,
+          "misc\/drupal.js": 1,
+          "misc\/ajax.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js": 1,
+          "sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js": 1,
+          "sites\/all\/modules\/contrib\/picture\/picture.min.js": 1,
+        },
+      },
+      CToolsModal: {
+        loadingText: "Loading...",
+        closeText: "Close Window",
+        closeImage:
+          "\u003Cimg class=\u0022img-responsive\u0022 src=\u0022https:\/\/www.miraclemom.com\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E",
+        throbber:
+          "\u003Cimg class=\u0022img-responsive\u0022 src=\u0022https:\/\/www.miraclemom.com\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E",
+      },
+      gigya: {
+        enabledProviders: "*",
+        sessionExpiration: 2000000,
+        connectWithoutLoginBehavior: "loginExistingUser",
+        mv: "mayor",
+        loginMode: "drupal_and_gigya",
+        loginUIParams: [
+          {
+            containerID: "divGigyaLogin",
+            buttonsStyle: "signInWith",
+            showTermsLink: 0,
+            width: "210",
+            height: "110",
+            version: 2,
+            enabledProviders: "facebook",
+          },
+        ],
+        loginDestination: "https:\/\/www.miraclemom.com\/socialize-login",
+      },
+      gigyaExtra: { isLogin: false, sessionMode: "drupal" },
+      jquery: { ui: { datepicker: { isRTL: false, firstDay: "0" } } },
+      datePopup: {
+        "edit-profile-main-field-enrollchild-information-und-0-field-enrollold-birth-date-und-0-value-datepicker-popup-0":
+          {
+            func: "datepicker",
+            settings: {
+              changeMonth: true,
+              changeYear: true,
+              autoPopUp: "focus",
+              closeAtTop: false,
+              speed: "immediate",
+              firstDay: 0,
+              dateFormat: "mm\/dd\/yy",
+              yearRange: "-10:+0",
+              fromTo: false,
+              syncEndDate: false,
+              defaultDate: "0y",
+            },
+          },
+        "edit-profile-main-field-enroll-date-of-birth-und-0-value-datepicker-popup-0":
+          {
+            func: "datepicker",
+            settings: {
+              changeMonth: true,
+              changeYear: true,
+              autoPopUp: "focus",
+              closeAtTop: false,
+              speed: "immediate",
+              firstDay: 0,
+              dateFormat: "mm\/dd\/yy",
+              yearRange: "+0:+1",
+              fromTo: false,
+              syncEndDate: false,
+              defaultDate: "0y",
+            },
+          },
+      },
+      ajax: {
+        "edit-profile-main-field-enrollchild-information-und-0-remove-button": {
+          callback: "field_collection_remove_js",
+          effect: "fade",
+          wrapper:
+            "profile-main-field-enrollchild-information-add-more-wrapper",
+          event: "mousedown",
+          keypress: true,
+          prevent: "click",
+          url: "\/system\/ajax",
+          submit: {
+            _triggering_element_name:
+              "profile_main_field_enrollchild_information_und_0_remove_button",
+            _triggering_element_value: "Remove",
+          },
+        },
+        "edit-profile-main-field-enrollchild-information-und-add-more": {
+          callback: "field_add_more_js",
+          wrapper:
+            "profile-main-field-enrollchild-information-add-more-wrapper",
+          effect: "fade",
+          event: "mousedown",
+          keypress: true,
+          prevent: "click",
+          url: "\/system\/ajax",
+          submit: {
+            _triggering_element_name:
+              "profile_main_field_enrollchild_information_add_more",
+            _triggering_element_value: "Add Child",
+          },
+        },
+      },
+      urlIsAjaxTrusted: {
+        "\/system\/ajax": true,
+        "\/user\/enrollment": true,
+      },
+      tableDrag: {
+        "field-enrollchild-information-values": {
+          "field_enrollchild_information-delta-order": [
+            {
+              target: "field_enrollchild_information-delta-order",
+              source: "field_enrollchild_information-delta-order",
+              relationship: "sibling",
+              action: "order",
+              hidden: true,
+              limit: 0,
+            },
+          ],
+        },
+      },
+      field_group: { div: "form" },
+      enfamil: {
+        profilename: "profile-main",
+        country_code: "",
+        sample_product_frm: 0,
+        fc_field_limit: "3",
+      },
+      enfa_gigya_url_param: "1",
+      extlink: {
+        extTarget: "_blank",
+        extClass: 0,
+        extLabel: "(link is external)",
+        extImgClass: 0,
+        extSubdomains: 0,
+        extExclude: "",
+        extInclude: "",
+        extCssExclude: "",
+        extCssExplicit: ".view-banner-view, .multiple-articles",
+        extAlert: 0,
+        extAlertText: "This link will take you to an external web site.",
+        mailtoClass: 0,
+        mailtoLabel: "(link sends e-mail)",
+      },
+      responsive_menu: {
+        position: "left",
+        theme: "theme-white",
+        breakpoint: "custom.user.wide",
+        superfish: { delay: "300", speed: "100", speedOut: "100" },
+      },
+      bootstrap: {
+        anchorsFix: "0",
+        anchorsSmoothScrolling: "0",
+        formHasError: 1,
+        popoverEnabled: 1,
+        popoverOptions: {
+          animation: 1,
+          html: 0,
+          placement: "right",
+          selector: "",
+          trigger: "click",
+          triggerAutoclose: 1,
+          title: "",
+          content: "",
+          delay: 0,
+          container: "body",
+        },
+        tooltipEnabled: 0,
+        tooltipOptions: {
+          animation: 1,
+          html: 0,
+          placement: "auto left",
+          selector: "",
+          trigger: "hover focus",
+          delay: 0,
+          container: "body",
+        },
+      },
+    });
+    if (jQuery.isFunction(jQuery.holdReady)) {
+      jQuery.holdReady(false);
+    }
+  }
+  if (window.jQuery && window.Drupal) {
+    init_drupal_core_settings();
+  }
+</script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/themes/bootstrap/js/misc/tabledrag.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/date/date_popup/date_popup.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/tableheader.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/field_group/field_group.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/custom/enfamil_enrollment/js/enfamil_enrollment_form.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/custom/enfamil_enrollment/js/enfamil_enrollment_indenfamama.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/tabledrag.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.datepicker.min.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/ui/jquery.ui.datepicker-1.13.0-backport.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/modules/locale/locale.datepicker.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/date/date_popup/jquery.timeentry.pack.js?v=1.4.7"
+></script>
+
+document.body.appendChild
+<script type="text/javascript">
+  function init_drupal_core_settings() {
+    jQuery.extend(Drupal.settings, {
+      basePath: "\/",
+      pathPrefix: "",
+      setHasJsCookie: 0,
+      ajaxPageState: {
+        theme: "enfamamain",
+        theme_token: "S8pEV4HGbC8zVu99MJlR9T1L0W68MN0J_Ego_mIRW1M",
+        jquery_version: "1.10",
+        css: {
+          "modules\/system\/system.base.css": 1,
+          "misc\/ui\/jquery.ui.core.css": 1,
+          "misc\/ui\/jquery.ui.theme.css": 1,
+          "misc\/ui\/jquery.ui.datepicker.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/themes\/jquery.timeentry.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_api\/date.css": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_common\/css\/enfamil_common.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/css\/weight-gain-calc.css": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/css\/due-date-calculator.css": 1,
+          "modules\/field\/theme\/field.css": 1,
+          "modules\/node\/node.css": 1,
+          "sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css": 1,
+          "sites\/all\/modules\/contrib\/youtube\/css\/youtube.css": 1,
+          "sites\/all\/modules\/contrib\/extlink\/extlink.css": 1,
+          "sites\/all\/modules\/contrib\/views\/css\/views.css": 1,
+          "sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css": 1,
+          "sites\/all\/modules\/contrib\/ctools\/css\/ctools.css": 1,
+          "sites\/all\/modules\/contrib\/ctools\/css\/modal.css": 1,
+          "sites\/all\/modules\/contrib\/panels\/css\/panels.css": 1,
+          "sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/onecol\/onecol.css": 1,
+          "sites\/all\/libraries\/mmenu\/dist\/css\/jquery.mmenu.all.css": 1,
+          "sites\/all\/modules\/contrib\/responsive_menu\/css\/responsive_menu.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/bootstrap-select.min.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/style.css": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/css\/slick.min.css": 1,
+        },
+        js: {
+          "https:\/\/cdns.gigya.com\/JS\/socialize.js?apikey=3_-mEPgHm8oWxiXfjTlJodLIQTkoNkWTnWYOd1TWcY3erma9BoURk_I4V1hDEhnDfl\u0026lang=en": 1,
+          "public:\/\/google_tag\/global\/google_tag.default.script.js": 1,
+          "misc\/jquery-extend-3.4.0.js": 1,
+          "misc\/jquery-html-prefilter-3.5.0-backport.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.datepicker.min.js": 1,
+          "misc\/ui\/jquery.ui.datepicker-1.13.0-backport.js": 1,
+          "modules\/locale\/locale.datepicker.js": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/jquery.timeentry.pack.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_common\/js\/enfamil_common.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_personalization\/js\/enfamil_personalization.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_tools\/js\/enfamil_tools.js": 1,
+          "sites\/all\/modules\/contrib\/extlink\/extlink.js": 1,
+          "misc\/tabledrag.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js": 1,
+          "sites\/all\/modules\/contrib\/ctools\/js\/modal.js": 1,
+          "sites\/all\/modules\/contrib\/gigya\/js\/gigya.js": 1,
+          "sites\/all\/modules\/contrib\/gigya\/js\/gigya.behaviors.js": 1,
+          "sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js": 1,
+          "sites\/all\/modules\/contrib\/date\/date_popup\/date_popup.js": 1,
+          "misc\/tableheader.js": 1,
+          "sites\/all\/modules\/contrib\/field_group\/field_group.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment_form.js": 1,
+          "sites\/all\/modules\/custom\/enfamil_enrollment\/js\/enfamil_enrollment_indenfamama.js": 1,
+          "sites\/all\/libraries\/mmenu\/dist\/js\/jquery.mmenu.all.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/alert.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/carousel.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/collapse.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/dropdown.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/tooltip.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/tab.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/bootstrap\/js\/transition.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/carousel-swipe.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/bootstrap-select.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/custom.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/enfamamain.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/slick.min.js": 1,
+          "sites\/indiaenfamama\/themes\/enfamamain\/js\/facebookpixelcode.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/tabledrag.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/modules\/ctools\/js\/modal.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/bootstrap.js": 1,
+          "sites\/all\/modules\/contrib\/responsive_menu\/js\/responsive_menu.config.js": 1,
+          "sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js": 1,
+          "misc\/jquery.once.js": 1,
+          "misc\/drupal.js": 1,
+          "misc\/ajax.js": 1,
+          "sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js": 1,
+          "sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js": 1,
+          "sites\/all\/modules\/contrib\/picture\/picture.min.js": 1,
+        },
+      },
+      CToolsModal: {
+        loadingText: "Loading...",
+        closeText: "Close Window",
+        closeImage:
+          "\u003Cimg class=\u0022img-responsive\u0022 src=\u0022https:\/\/www.miraclemom.com\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E",
+        throbber:
+          "\u003Cimg class=\u0022img-responsive\u0022 src=\u0022https:\/\/www.miraclemom.com\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E",
+      },
+      gigya: {
+        enabledProviders: "*",
+        sessionExpiration: 2000000,
+        connectWithoutLoginBehavior: "loginExistingUser",
+        mv: "mayor",
+        loginMode: "drupal_and_gigya",
+        loginUIParams: [
+          {
+            containerID: "divGigyaLogin",
+            buttonsStyle: "signInWith",
+            showTermsLink: 0,
+            width: "210",
+            height: "110",
+            version: 2,
+            enabledProviders: "facebook",
+          },
+        ],
+        loginDestination: "https:\/\/www.miraclemom.com\/socialize-login",
+      },
+      gigyaExtra: { isLogin: false, sessionMode: "drupal" },
+      jquery: { ui: { datepicker: { isRTL: false, firstDay: "0" } } },
+      datePopup: {
+        "edit-profile-main-field-enrollchild-information-und-0-field-enrollold-birth-date-und-0-value-datepicker-popup-0":
+          {
+            func: "datepicker",
+            settings: {
+              changeMonth: true,
+              changeYear: true,
+              autoPopUp: "focus",
+              closeAtTop: false,
+              speed: "immediate",
+              firstDay: 0,
+              dateFormat: "mm\/dd\/yy",
+              yearRange: "-10:+0",
+              fromTo: false,
+              syncEndDate: false,
+              defaultDate: "0y",
+            },
+          },
+        "edit-profile-main-field-enroll-date-of-birth-und-0-value-datepicker-popup-0":
+          {
+            func: "datepicker",
+            settings: {
+              changeMonth: true,
+              changeYear: true,
+              autoPopUp: "focus",
+              closeAtTop: false,
+              speed: "immediate",
+              firstDay: 0,
+              dateFormat: "mm\/dd\/yy",
+              yearRange: "+0:+1",
+              fromTo: false,
+              syncEndDate: false,
+              defaultDate: "0y",
+            },
+          },
+      },
+      ajax: {
+        "edit-profile-main-field-enrollchild-information-und-0-remove-button": {
+          callback: "field_collection_remove_js",
+          effect: "fade",
+          wrapper:
+            "profile-main-field-enrollchild-information-add-more-wrapper",
+          event: "mousedown",
+          keypress: true,
+          prevent: "click",
+          url: "\/system\/ajax",
+          submit: {
+            _triggering_element_name:
+              "profile_main_field_enrollchild_information_und_0_remove_button",
+            _triggering_element_value: "Remove",
+          },
+        },
+        "edit-profile-main-field-enrollchild-information-und-add-more": {
+          callback: "field_add_more_js",
+          wrapper:
+            "profile-main-field-enrollchild-information-add-more-wrapper",
+          effect: "fade",
+          event: "mousedown",
+          keypress: true,
+          prevent: "click",
+          url: "\/system\/ajax",
+          submit: {
+            _triggering_element_name:
+              "profile_main_field_enrollchild_information_add_more",
+            _triggering_element_value: "Add Child",
+          },
+        },
+      },
+      urlIsAjaxTrusted: {
+        "\/system\/ajax": true,
+        "\/user\/enrollment": true,
+      },
+      tableDrag: {
+        "field-enrollchild-information-values": {
+          "field_enrollchild_information-delta-order": [
+            {
+              target: "field_enrollchild_information-delta-order",
+              source: "field_enrollchild_information-delta-order",
+              relationship: "sibling",
+              action: "order",
+              hidden: true,
+              limit: 0,
+            },
+          ],
+        },
+      },
+      field_group: { div: "form" },
+      enfamil: {
+        profilename: "profile-main",
+        country_code: "",
+        sample_product_frm: 0,
+        fc_field_limit: "3",
+      },
+      enfa_gigya_url_param: "1",
+      extlink: {
+        extTarget: "_blank",
+        extClass: 0,
+        extLabel: "(link is external)",
+        extImgClass: 0,
+        extSubdomains: 0,
+        extExclude: "",
+        extInclude: "",
+        extCssExclude: "",
+        extCssExplicit: ".view-banner-view, .multiple-articles",
+        extAlert: 0,
+        extAlertText: "This link will take you to an external web site.",
+        mailtoClass: 0,
+        mailtoLabel: "(link sends e-mail)",
+      },
+      responsive_menu: {
+        position: "left",
+        theme: "theme-white",
+        breakpoint: "custom.user.wide",
+        superfish: { delay: "300", speed: "100", speedOut: "100" },
+      },
+      bootstrap: {
+        anchorsFix: "0",
+        anchorsSmoothScrolling: "0",
+        formHasError: 1,
+        popoverEnabled: 1,
+        popoverOptions: {
+          animation: 1,
+          html: 0,
+          placement: "right",
+          selector: "",
+          trigger: "click",
+          triggerAutoclose: 1,
+          title: "",
+          content: "",
+          delay: 0,
+          container: "body",
+        },
+        tooltipEnabled: 0,
+        tooltipOptions: {
+          animation: 1,
+          html: 0,
+          placement: "auto left",
+          selector: "",
+          trigger: "hover focus",
+          delay: 0,
+          container: "body",
+        },
+      },
+    });
+    if (jQuery.isFunction(jQuery.holdReady)) {
+      jQuery.holdReady(false);
+    }
+  }
+  if (window.jQuery && window.Drupal) {
+    init_drupal_core_settings();
+  }
+</script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/themes/bootstrap/js/misc/tabledrag.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/date/date_popup/date_popup.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/tableheader.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/field_group/field_group.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/custom/enfamil_enrollment/js/enfamil_enrollment_form.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/custom/enfamil_enrollment/js/enfamil_enrollment_indenfamama.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/tabledrag.js?rcsk4w"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.datepicker.min.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/misc/ui/jquery.ui.datepicker-1.13.0-backport.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/modules/locale/locale.datepicker.js?v=1.10.2"
+></script>
+<script
+  type="text/javascript"
+  defer="defer"
+  src="https://www.miraclemom.com/sites/all/modules/contrib/date/date_popup/jquery.timeentry.pack.js?v=1.4.7"
+></script>
+`)); });
