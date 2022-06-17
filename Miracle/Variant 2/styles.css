@@ -15,6 +15,8 @@
   header .header-top {
     position: fixed;
     width: 100%;
+    max-width: 1302px;
+    z-index: 999;
   }
 
   header .header-bottom {
@@ -31,27 +33,29 @@ header .top-box,
   display: none !important;
 }
 
-.not-logged-in header .nav .last.leaf {
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(236, 25, 140);
-  border-radius: 43px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16px;
-  cursor: pointer;
-  padding: 6px 13px !important;
-}
+@media screen and (min-width: 768px) {
+  .not-logged-in header .nav .last.leaf {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(236, 25, 140);
+    border-radius: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    cursor: pointer;
+    padding: 6px 13px !important;
+  }
 
-.not-logged-in header .nav .last.leaf .join-enfamil.jquery-once-20-processed,
-.not-logged-in
-  header
-  .nav
-  .last.leaf
-  .join-enfamil.jquery-once-20-processed::before {
-  color: rgb(236, 25, 140) !important;
-  filter: invert(20%) sepia(66%) saturate(4518%) hue-rotate(314deg)
-    brightness(94%) contrast(96%) !important;
+  .not-logged-in header .nav .last.leaf .join-enfamil.jquery-once-20-processed,
+  .not-logged-in
+    header
+    .nav
+    .last.leaf
+    .join-enfamil.jquery-once-20-processed::before {
+    color: rgb(236, 25, 140) !important;
+    filter: invert(20%) sepia(66%) saturate(4518%) hue-rotate(314deg)
+      brightness(94%) contrast(96%) !important;
+  }
 }
 
 .display-none {
@@ -94,7 +98,13 @@ header .top-box,
 
 @media screen and (min-width: 1200px) {
   .form-modal {
-    max-height: 910px;
+    max-height: 920px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .form-modal {
+    right: calc(50% - 646px);
   }
 }
 
