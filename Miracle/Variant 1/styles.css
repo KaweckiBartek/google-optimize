@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
+.scroll--prevent {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 @media screen and (min-width: 768px) {
   .responsive-menu-block-wrapper.responsive-menu-block {
     display: block;
@@ -10,7 +15,6 @@
     display: none;
   }
 }
-
 .header-top .region-top-bar ul.menu li {
   display: inline-block !important;
 }
@@ -19,7 +23,6 @@ header .top-box,
 .top-box.visible-xs {
   display: none !important;
 }
-
 @media screen and (min-width: 768px) {
   .not-logged-in header .nav .last.leaf {
     background: rgb(255, 255, 255);
@@ -44,7 +47,6 @@ header .top-box,
       brightness(94%) contrast(96%) !important;
   }
 }
-
 .display-none {
   display: none;
 }
@@ -84,7 +86,6 @@ header .top-box,
     max-height: 920px;
   }
 }
-
 .form-modal-backdrop {
   height: 100vh;
   width: 100vw;
@@ -165,4 +166,19 @@ header .top-box,
 
 .form-modal form.enrollment-form-indiaenfamama .form-actions {
   margin-bottom: 0px;
+}
+
+.responsive-menu-toggle-icon span.icon {
+  border-radius: 0px !important;
+  position: relative !important;
+  top: 8px !important;
+  left: -4px !important;
+  background: url("/sites/indiaenfamama/themes/enfamamain/images/india-sprite.png") -297px -508px
+    no-repeat no-repeat !important;
+  height: 25px !important;
+  width: 23px !important;
+}
+
+.responsive-menu-toggle-icon span.label {
+  display: none !important;
 }

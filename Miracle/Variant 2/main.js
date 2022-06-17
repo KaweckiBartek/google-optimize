@@ -1,5 +1,6 @@
 const signUpPopUp = document.querySelectorAll(".sign-up");
 const registerButton = document.querySelector("header .nav .last.leaf");
+const registerMobileButton = document.querySelector(".leaf.menu-mlid-8031");
 const closeButton = document.querySelector(".form-modal .close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
 const isLoggedIn = document.body.classList.contains("logged-in");
@@ -21,11 +22,13 @@ const formInputs = document.querySelectorAll(
 
 const showFormPopUp = () => {
   signUpPopUp.forEach((el) => el.classList.remove("display-none"));
+  window.document.body.classList.add("scroll--prevent");
   sessionStorage.setItem("alreadyShow", "alredy shown");
 };
 
 const closeFormPopUp = () => {
   signUpPopUp.forEach((el) => el.classList.add("display-none"));
+  window.document.body.classList.remove("scroll--prevent");
 };
 
 const showModalFirstTime = () => {
@@ -65,11 +68,15 @@ const showHidenContent = () => {
 
 if (!isLoggedIn) {
   registerButton.innerHTML = `<a
-  class="join-enfamil jquery-once-20-processed"
+  class="join-enfamil jquery-once-20-processed register-btn"
   >Register account</a
   >
   `;
+
+  registerMobileButton.innerHTML = `<a class="join-enfamil">Register account</a>`;
+  registerMobileButton.style.cursor = "pointer";
   registerButton.addEventListener("click", showFormPopUp);
+  registerMobileButton.addEventListener("click", showFormPopUp);
   window.addEventListener("DOMContentLoaded", () => {
     showModalFirstTime();
   });

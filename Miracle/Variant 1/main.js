@@ -22,11 +22,13 @@ const formInputs = document.querySelectorAll(
 
 const showFormPopUp = () => {
   signUpPopUp.forEach((el) => el.classList.remove("display-none"));
+  window.document.body.classList.add("scroll--prevent");
   sessionStorage.setItem("alreadyShow", "alredy shown");
 };
 
 const closeFormPopUp = () => {
   signUpPopUp.forEach((el) => el.classList.add("display-none"));
+  window.document.body.classList.remove("scroll--prevent");
 };
 
 const showModalFirstTime = () => {

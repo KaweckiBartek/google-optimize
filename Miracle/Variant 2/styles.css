@@ -1,17 +1,39 @@
 * {
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .scroll--prevent {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+.form-modal-backdrop {
+  height: 100vh;
+  width: 100vw;
+  background: 0% 0% no-repeat no-repeat padding-box padding-box
+    rgb(214, 236, 255);
+  opacity: 0.75;
+  position: fixed;
+  content: "";
+  left: 0px;
+  top: 0px;
+  z-index: 9990;
+}
 
 @media screen and (min-width: 768px) {
   .responsive-menu-block-wrapper.responsive-menu-block {
     display: block;
   }
+
+  .form-modal-backdrop {
+    display: none;
+  }
+
   #block-responsive-menu-toggle {
     display: none;
   }
-}
 
-@media screen and (min-width: 768px) {
   header .header-top {
     position: fixed;
     width: 100%;
@@ -23,7 +45,6 @@
     margin-top: 56px;
   }
 }
-
 .header-top .region-top-bar ul.menu li {
   display: inline-block !important;
 }
@@ -32,7 +53,6 @@ header .top-box,
 .top-box.visible-xs {
   display: none !important;
 }
-
 @media screen and (min-width: 768px) {
   .not-logged-in header .nav .last.leaf {
     background: rgb(255, 255, 255);
@@ -57,9 +77,7 @@ header .top-box,
       brightness(94%) contrast(96%) !important;
   }
 }
-
 .display-none {
-  visibility: none;
   display: none;
 }
 
@@ -68,46 +86,41 @@ header .top-box,
   position: fixed;
   top: 10%;
   right: 50%;
-  transform: translate(50%, 0);
+  transform: translate(50%, 0px);
   z-index: 9999;
-  border-radius: 30px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
+  background: 0% 0% no-repeat no-repeat padding-box padding-box
+    rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
   border-radius: 30px;
   width: 95%;
-  height: calc(100% - 10%);
+  height: calc(90%);
   overflow-y: auto;
   max-width: 700px;
 }
-
 @media screen and (min-width: 768px) {
   .form-modal {
     top: 56px;
     right: 10px;
     height: calc(100% - 56px);
     max-height: 705px;
-    transform: translate(0, 0);
+    transform: translate(0px, 0px);
   }
 }
-
 @media screen and (min-width: 992px) {
   .form-modal {
     max-height: 800px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .form-modal {
-    max-height: 920px;
+    max-height: 930px;
   }
 }
-
 @media screen and (min-width: 1300px) {
   .form-modal {
     right: calc(50% - 646px);
   }
 }
-
 .form-modal .heading-wrapper {
   display: flex;
   justify-content: space-between;
@@ -120,27 +133,38 @@ header .top-box,
   top: 32px;
   width: 32px;
   height: 32px;
-  background: transparent;
+  background-image: initial;
+  background-position: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
   border: none;
 }
+
 .form-modal .close-button:hover {
   opacity: 0.3;
 }
-.form-modal .close-button:before,
-.form-modal .close-button:after {
+
+.form-modal .close-button::before,
+.form-modal .close-button::after {
   position: absolute;
   left: 15px;
-  top: 0;
+  top: 0px;
   content: " ";
   height: 33px;
   width: 3px;
-  background-color: #707070;
+  background-color: rgb(112, 112, 112);
   border-radius: 10px;
 }
-.form-modal .close-button:before {
+
+.form-modal .close-button::before {
   transform: rotate(45deg);
 }
-.form-modal .close-button:after {
+
+.form-modal .close-button::after {
   transform: rotate(-45deg);
 }
 
@@ -151,11 +175,11 @@ header .top-box,
 .form-modal form .field-type-text,
 .form-modal form .field-type-datetime,
 .form-modal form .field-type-list-text.field-name-field-enroll-province {
-  padding: 0;
+  padding: 0px;
 }
 
 .form-modal .enrollment-form-indiaenfamama {
-  margin-left: 0;
+  margin-left: 0px;
 }
 
 .form-modal .required-data {
@@ -164,4 +188,19 @@ header .top-box,
 
 .form-modal form.enrollment-form-indiaenfamama .form-actions {
   margin-bottom: 0px;
+}
+
+.responsive-menu-toggle-icon span.icon {
+  border-radius: 0px !important;
+  position: relative !important;
+  top: 8px !important;
+  left: -4px !important;
+  background: url("/sites/indiaenfamama/themes/enfamamain/images/india-sprite.png") -297px -508px
+    no-repeat no-repeat !important;
+  height: 25px !important;
+  width: 23px !important;
+}
+
+.responsive-menu-toggle-icon span.label {
+  display: none !important;
 }
