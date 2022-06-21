@@ -9,14 +9,62 @@
   padding: 20px 4px;
   z-index: 9999;
 
-  .form-control {
-    display: block;
-    background: #fff;
+  &__close-button {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    background-image: initial;
+    background-position: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 15px;
+      top: 0px;
+      content: " ";
+      height: 33px;
+      width: 3px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .form-control,
+  .form-control[type="email"] {
+    background: #093a6d;
     height: 48px;
     line-height: 48px;
     width: 100%;
     border-radius: 24px;
-    border: 0;
+    border: 1px solid #7f8fa9;
     color: #26214a;
     font-weight: 400;
     font-size: 1rem;
@@ -24,6 +72,20 @@
 
     @media screen and (min-width: 768px) {
       padding: 0 140px 0 25px;
+    }
+  }
+
+  .newsletter__label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 15px;
+
+    &::after,
+    &::before {
+      display: none;
     }
   }
 }
