@@ -31,6 +31,22 @@
   z-index: 9990;
 }
 
+.newsletter--popup-open {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  bottom: 25px;
+  right: 25px;
+  background-color: #005ba9;
+  padding: 11px;
+  border-radius: 50%;
+  font-size: 23px;
+  color: white;
+  border: 2px solid white;
+  z-index: 9;
+}
+
 .newsletter--popup {
   width: calc(100% - 20px);
   background: linear-gradient(to bottom, #0c2157 0%, #0067b1 100%);

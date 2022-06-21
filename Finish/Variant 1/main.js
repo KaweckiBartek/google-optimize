@@ -1,7 +1,7 @@
 const signUpPopUp = document.querySelectorAll(
   ".newsletter--popup, .newsletter--popup-backdrop"
 );
-const registerButton = document.querySelector("header .nav .last.leaf");
+const openButton = document.querySelector(".newsletter--popup-open");
 const closeButton = document.querySelector(".newsletter--popup__close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
 // const isLoggedIn = document.body.classList.contains("logged-in");
@@ -26,9 +26,9 @@ const showModalFirstTime = () => {
   }
 };
 
-// registerMobileButton.addEventListener("click", showFormPopUp);
 window.addEventListener("DOMContentLoaded", () => {
   showModalFirstTime();
 });
 
+openButton.addEventListener("click", showFormPopUp);
 closeButton.addEventListener("click", closeFormPopUp);
