@@ -6,34 +6,27 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 30px;
-  padding: 20px 4px;
+  padding: 16px 4px;
   z-index: 9999;
 }
 .newsletter--popup__close-button {
   position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
-  background-image: initial;
-  background-position: initial;
-  background-size: initial;
-  background-repeat: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   border: none;
 }
 .newsletter--popup__close-button:hover {
-  opacity: 0.3;
+  color: #ed6d84;
 }
 .newsletter--popup__close-button::before, .newsletter--popup__close-button::after {
   position: absolute;
-  left: 15px;
+  left: 10px;
   top: 0px;
   content: " ";
-  height: 33px;
+  height: 26px;
   width: 3px;
   background-color: white;
   border-radius: 10px;
@@ -49,6 +42,7 @@
   text-align: left;
   font-size: 1.25rem;
   font-weight: 500;
+  padding-right: 35px;
 }
 .newsletter--popup .form-control,
 .newsletter--popup .form-control[type=email] {
@@ -79,4 +73,16 @@
 }
 .newsletter--popup .newsletter__label::after, .newsletter--popup .newsletter__label::before {
   display: none;
+}
+.newsletter--popup .newsletter__submit {
+  margin: 0 auto;
+  display: block;
+  padding: 12px 35px;
+  background-color: #df2928;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
