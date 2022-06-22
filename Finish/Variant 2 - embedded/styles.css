@@ -52,6 +52,22 @@
     padding: 32px 18px;
   }
 }
+.newsletter--embedded .newsletter__image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.newsletter--embedded .newsletter__image {
+  width: 100%;
+  height: auto;
+  max-width: 330px;
+}
+@media screen and (min-width: 768px) {
+  .newsletter--embedded .newsletter__image {
+    max-width: 455px;
+  }
+}
 .newsletter--embedded h3 {
   text-transform: uppercase;
   text-align: left;
