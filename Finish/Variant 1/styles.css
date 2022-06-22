@@ -76,6 +76,7 @@
   height: 25px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .newsletter--popup__close-button:hover::before, .newsletter--popup__close-button:hover::after {
   background-color: #ed6d84;
@@ -154,6 +155,7 @@
   text-transform: uppercase;
   color: white;
   font-weight: 700;
+  cursor: pointer;
 }
 .newsletter--popup .newsletter__checkbox--info label {
   padding-left: 0;
@@ -166,11 +168,13 @@
   height: 100%;
   left: 0;
   z-index: 999999;
+  cursor: pointer;
 }
 .newsletter--popup .newsletter__checkbox input:checked + label:after {
   opacity: 1;
 }
 .newsletter--popup .newsletter__checkbox label {
+  cursor: pointer;
   color: white;
   padding: 0 0 0 28px;
 }
