@@ -106,6 +106,18 @@
     }
   }
 
+  .newsletter__image {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 20px auto;
+      max-width: 290px;
+    }
+  }
+
   h3 {
     text-transform: uppercase;
     text-align: left;

@@ -98,6 +98,18 @@
 .newsletter--popup__close-button::after {
   transform: rotate(-45deg);
 }
+.newsletter--popup .newsletter__image {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .newsletter--popup .newsletter__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    max-width: 290px;
+  }
+}
 .newsletter--popup h3 {
   text-transform: uppercase;
   text-align: left;
