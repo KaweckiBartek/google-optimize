@@ -77,10 +77,17 @@ if (!isLoggedIn) {
   registerMobileButton.style.cursor = "pointer";
   registerButton.addEventListener("click", showFormPopUp);
   registerMobileButton.addEventListener("click", showFormPopUp);
-  window.addEventListener("DOMContentLoaded", () => {
-    showModalFirstTime();
-  });
-}
 
-closeButton.addEventListener("click", closeFormPopUp);
-formInputs.forEach((input) => input.addEventListener("change", inputFunction));
+  closeButton.addEventListener("click", closeFormPopUp);
+  formInputs.forEach((input) =>
+    input.addEventListener("change", inputFunction)
+  );
+
+  if (document.readyState !== "loading") {
+    showModalFirstTime();
+  } else {
+    document.addEventListener("DOMContentLoaded", function () {
+      showModalFirstTime();
+    });
+  }
+}

@@ -19,6 +19,69 @@
   transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 
+.fade-out-up {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s linear;
+}
+
+.fade-in-down {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s linear;
+}
+
+@-webkit-keyframes fade-in-down {
+  from {
+    transform: translateY(-30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    transform: translateY(-30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out-down {
+  from {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes fade-out-down {
+  from {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
 .newsletter--popup-backdrop {
   height: 100vh;
   width: 100vw;

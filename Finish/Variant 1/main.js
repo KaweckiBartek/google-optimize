@@ -1,23 +1,21 @@
-const signUpPopUp = document.querySelectorAll(
-  ".newsletter--popup, .newsletter--popup-backdrop"
-);
+const signUpToggleForm = document.querySelector(".newsletter--popup");
 const openButton = document.querySelector(".newsletter--popup-open");
 const closeButton = document.querySelector(".newsletter--popup__close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
 // const isLoggedIn = document.body.classList.contains("logged-in");
 
 const showFormPopUp = () => {
-  signUpPopUp.forEach((el) => {
-    el.classList.remove("hidden");
-    el.classList.add("visible");
-  });
-  window.document.body.classList.add("scroll--prevent");
+  signUpToggleForm.classList.remove("hidden");
+  signUpToggleForm.classList.add("visible");
+  openButton.classList.remove("fade-in-down");
+  openButton.classList.add("fade-out-up");
   sessionStorage.setItem("alreadyShow", "alredy shown");
 };
 
 const closeFormPopUp = () => {
-  signUpPopUp.forEach((el) => el.classList.add("hidden"));
-  window.document.body.classList.remove("scroll--prevent");
+  signUpToggleForm.classList.add("hidden");
+  openButton.classList.remove("fade-out-up");
+  openButton.classList.add("fade-in-down");
 };
 
 const showModalFirstTime = () => {
@@ -26,9 +24,12 @@ const showModalFirstTime = () => {
   }
 };
 
-window.addEventListener("DOMContentLoaded", () => {
+if (document.readyState !== "loading") {
   showModalFirstTime();
-});
-
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    showModalFirstTime();
+  });
+}
 openButton.addEventListener("click", showFormPopUp);
 closeButton.addEventListener("click", closeFormPopUp);
