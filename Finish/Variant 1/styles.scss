@@ -33,53 +33,7 @@
   transition: opacity 0.3s, transform 0.3s linear;
 }
 
-// .fade-out-up {
-//   animation: fade-out-up 0.3 ease-in-out forwards;
-// }
-
-// .fade-in-down {
-//   animation: fade-in-down 0.3 ease-in-out forwards;
-// }
-
-@keyframes fade-in-down {
-  from {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out-down {
-  from {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-.newsletter--popup-backdrop {
-  height: 100vh;
-  width: 100vw;
-  background: 0% 0% no-repeat no-repeat padding-box padding-box #183a6c;
-  opacity: 0.3;
-  position: fixed;
-  content: "";
-  left: 0px;
-  top: 0px;
-  z-index: 9990;
-}
-
-.newsletter--popup-open {
+.newsletter--popup-open-btn {
   position: fixed;
   display: flex;
   align-items: center;
@@ -100,12 +54,18 @@
   background: linear-gradient(to bottom, #0c2157 0%, #0067b1 100%);
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 20px;
   padding: 18px 9px;
   z-index: 9999;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 448px;
+    right: 27px;
+    transform: unset;
+  }
 
   &__close-button {
     position: absolute;
@@ -151,6 +111,7 @@
     font-size: 20px;
     font-weight: 500;
     padding-right: 35px;
+    margin-bottom: 5px;
   }
 
   .form-control,
@@ -189,7 +150,9 @@
       display: none;
     }
   }
-
+  .newsletter__input {
+    margin-bottom: 5px;
+  }
   .newsletter__submit {
     margin: 0 auto;
     display: block;
@@ -208,16 +171,39 @@
     text-decoration: underline;
   }
 
-  .newsletter__checkbox input {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: 999999;
+  .newsletter__checkbox {
+    input {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      z-index: 999999;
 
-    &:checked + label:after {
-      opacity: 1;
+      &:checked + label:after {
+        opacity: 1;
+      }
+    }
+
+    label {
+      color: white;
+      padding: 0 0 0 28px;
+
+      &::before {
+        border-radius: 5px;
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0.6);
+        width: 16px;
+        height: 16px;
+      }
+
+      &::after {
+        width: 10px;
+        height: 11px;
+        background-size: 13px;
+        top: 4px;
+        left: 5px;
+      }
     }
   }
 }

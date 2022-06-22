@@ -1,5 +1,5 @@
 const signUpToggleForm = document.querySelector(".newsletter--popup");
-const openButton = document.querySelector(".newsletter--popup-open");
+const openButton = document.querySelector(".newsletter--popup-open-btn");
 const closeButton = document.querySelector(".newsletter--popup__close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
 // const isLoggedIn = document.body.classList.contains("logged-in");

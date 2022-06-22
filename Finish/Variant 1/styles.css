@@ -33,68 +33,7 @@
   transition: opacity 0.3s, transform 0.3s linear;
 }
 
-@-webkit-keyframes fade-in-down {
-  from {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-down {
-  from {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-out-down {
-  from {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-@keyframes fade-out-down {
-  from {
-    transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-30px);
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-.newsletter--popup-backdrop {
-  height: 100vh;
-  width: 100vw;
-  background: 0% 0% no-repeat no-repeat padding-box padding-box #183a6c;
-  opacity: 0.3;
-  position: fixed;
-  content: "";
-  left: 0px;
-  top: 0px;
-  z-index: 9990;
-}
-
-.newsletter--popup-open {
+.newsletter--popup-open-btn {
   position: fixed;
   display: flex;
   align-items: center;
@@ -115,12 +54,19 @@
   background: linear-gradient(to bottom, #0c2157 0%, #0067b1 100%);
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   border-radius: 20px;
   padding: 18px 9px;
   z-index: 9999;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}
+@media screen and (min-width: 768px) {
+  .newsletter--popup {
+    max-width: 448px;
+    right: 27px;
+    transform: unset;
+  }
 }
 .newsletter--popup__close-button {
   position: absolute;
@@ -157,6 +103,7 @@
   font-size: 20px;
   font-weight: 500;
   padding-right: 35px;
+  margin-bottom: 5px;
 }
 .newsletter--popup .form-control,
 .newsletter--popup .form-control[type=email] {
@@ -193,6 +140,9 @@
 .newsletter--popup .newsletter__label::after, .newsletter--popup .newsletter__label::before {
   display: none;
 }
+.newsletter--popup .newsletter__input {
+  margin-bottom: 5px;
+}
 .newsletter--popup .newsletter__submit {
   margin: 0 auto;
   display: block;
@@ -219,4 +169,22 @@
 }
 .newsletter--popup .newsletter__checkbox input:checked + label:after {
   opacity: 1;
+}
+.newsletter--popup .newsletter__checkbox label {
+  color: white;
+  padding: 0 0 0 28px;
+}
+.newsletter--popup .newsletter__checkbox label::before {
+  border-radius: 5px;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  width: 16px;
+  height: 16px;
+}
+.newsletter--popup .newsletter__checkbox label::after {
+  width: 10px;
+  height: 11px;
+  background-size: 13px;
+  top: 4px;
+  left: 5px;
 }/*# sourceMappingURL=styles.css.map */
