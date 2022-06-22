@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+.scroll--prevent {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+.fade-out-up {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s linear;
+}
+
+.fade-in-down {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s linear;
+}
+
+.newsletter--popup-open-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  bottom: 25px;
+  right: 25px;
+  background-color: #005ba9;
+  padding: 11px;
+  border-radius: 50%;
+  font-size: 23px;
+  color: white;
+  border: 2px solid white;
+  z-index: 9;
+}
+
+.newsletter--popup {
+  width: calc(100% - 20px);
+  background: linear-gradient(to bottom, #0c2157 0%, #0067b1 100%);
+  position: fixed;
+  bottom: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 20px;
+  padding: 18px 9px;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}
+@media screen and (min-width: 768px) {
+  .newsletter--popup {
+    max-width: 448px;
+    right: 27px;
+    transform: unset;
+  }
+}
+.newsletter--popup__close-button {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.newsletter--popup__close-button:hover::before, .newsletter--popup__close-button:hover::after {
+  background-color: #ed6d84;
+}
+.newsletter--popup__close-button::before, .newsletter--popup__close-button::after {
+  transition: background-color 0.3s;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  content: " ";
+  height: 26px;
+  width: 3px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.newsletter--popup__close-button::before {
+  transform: rotate(45deg);
+}
+.newsletter--popup__close-button::after {
+  transform: rotate(-45deg);
+}
+.newsletter--popup h3 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 35px;
+  margin-bottom: 5px;
+}
+.newsletter--popup .form-control,
+.newsletter--popup .form-control[type=email] {
+  background: rgba(18, 18, 18, 0.2);
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid #7f8fa9;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 2px;
+  color: white;
+  padding: 0 20px;
+}
+.newsletter--popup .newsletter__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: -0.1;
+  color: white;
+  line-height: 24px;
+}
+.newsletter--popup .newsletter__label::after, .newsletter--popup .newsletter__label::before {
+  display: none;
+}
+.newsletter--popup .newsletter__input {
+  margin-bottom: 5px;
+}
+.newsletter--popup .newsletter__submit {
+  margin: 0 auto;
+  display: block;
+  padding: 12px 35px;
+  background-color: #df2928;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.newsletter--popup .newsletter__checkbox--info label {
+  padding-left: 0;
+  text-decoration: underline;
+}
+.newsletter--popup .newsletter__checkbox input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 999999;
+  cursor: pointer;
+}
+.newsletter--popup .newsletter__checkbox input:checked + label:after {
+  opacity: 1;
+}
+.newsletter--popup .newsletter__checkbox label {
+  cursor: pointer;
+  color: white;
+  padding: 0 0 0 28px;
+}
+.newsletter--popup .newsletter__checkbox label::before {
+  border-radius: 5px;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  width: 16px;
+  height: 16px;
+}
+.newsletter--popup .newsletter__checkbox label::after {
+  width: 10px;
+  height: 11px;
+  background-size: 13px;
+  top: 4px;
+  left: 5px;
+}/*# sourceMappingURL=styles.css.map */
