@@ -58,6 +58,11 @@
   justify-content: center;
   margin-bottom: 15px;
 }
+@media screen and (min-width: 768px) {
+  .newsletter--embedded .newsletter__image-wrapper {
+    height: 100%;
+  }
+}
 .newsletter--embedded .newsletter__image {
   width: 100%;
   height: auto;
