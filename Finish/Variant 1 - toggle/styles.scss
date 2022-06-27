@@ -70,6 +70,18 @@
     right: 27px;
     transform: unset;
     padding: 108px 9px 18px 9px;
+
+    @media screen and (max-height: 860px) {
+      transform: scale(0.8);
+      right: -20px;
+      bottom: -60px;
+    }
+
+    @media screen and (max-height: 660px) {
+      transform: scale(0.6);
+      right: -63px;
+      bottom: -130px;
+    }
   }
 
   &__close-button {
