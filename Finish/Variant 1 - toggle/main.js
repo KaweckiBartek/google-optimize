@@ -2,7 +2,6 @@ const signUpToggleForm = document.querySelector(".newsletter--popup");
 const openButton = document.querySelector(".newsletter--popup-open-btn");
 const closeButton = document.querySelector(".newsletter--popup__close-button");
 const isModalShown = sessionStorage.getItem("alreadyShow");
-// const isLoggedIn = document.body.classList.contains("logged-in");
 
 const showFormPopUp = () => {
   signUpToggleForm.classList.remove("hidden");
@@ -24,6 +23,9 @@ const showModalFirstTime = () => {
   }
 };
 
+openButton.addEventListener("click", showFormPopUp);
+closeButton.addEventListener("click", closeFormPopUp);
+
 if (document.readyState !== "loading") {
   showModalFirstTime();
 } else {
@@ -31,5 +33,3 @@ if (document.readyState !== "loading") {
     showModalFirstTime();
   });
 }
-openButton.addEventListener("click", showFormPopUp);
-closeButton.addEventListener("click", closeFormPopUp);

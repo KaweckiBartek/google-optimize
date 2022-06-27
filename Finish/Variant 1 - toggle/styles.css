@@ -19,6 +19,10 @@
   transition: visibility 0s 0.3s, opacity 0.3s linear;
 }
 
+.shopify-section.simple-popup {
+  display: none;
+}
+
 .fade-out-up {
   visibility: hidden;
   opacity: 0;
@@ -66,6 +70,7 @@
     max-width: 448px;
     right: 27px;
     transform: unset;
+    padding: 108px 9px 18px 9px;
   }
 }
 .newsletter--popup__close-button {
@@ -78,10 +83,12 @@
   border: none;
   cursor: pointer;
 }
-.newsletter--popup__close-button:hover::before, .newsletter--popup__close-button:hover::after {
+.newsletter--popup__close-button:hover::before,
+.newsletter--popup__close-button:hover::after {
   background-color: #ed6d84;
 }
-.newsletter--popup__close-button::before, .newsletter--popup__close-button::after {
+.newsletter--popup__close-button::before,
+.newsletter--popup__close-button::after {
   transition: background-color 0.3s;
   position: absolute;
   left: 10px;
@@ -98,16 +105,24 @@
 .newsletter--popup__close-button::after {
   transform: rotate(-45deg);
 }
+.newsletter--popup .success,
+.newsletter--popup .nonsubscriber {
+  text-align: center;
+}
 .newsletter--popup .newsletter__image {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .newsletter--popup .newsletter__image {
     display: block;
+    position: absolute;
+    top: -145px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: auto;
-    margin: 0 auto 20px auto;
-    max-width: 290px;
+    margin: 0 auto;
+    max-width: 280px;
   }
 }
 .newsletter--popup h3 {
@@ -119,7 +134,7 @@
   margin-bottom: 5px;
 }
 .newsletter--popup .form-control,
-.newsletter--popup .form-control[type=email] {
+.newsletter--popup .form-control[type="email"] {
   background: rgba(18, 18, 18, 0.2);
   height: 48px;
   line-height: 48px;
@@ -144,7 +159,8 @@
   color: white;
   line-height: 24px;
 }
-.newsletter--popup .newsletter__label::after, .newsletter--popup .newsletter__label::before {
+.newsletter--popup .newsletter__label::after,
+.newsletter--popup .newsletter__label::before {
   display: none;
 }
 .newsletter--popup .newsletter__input {
@@ -197,4 +213,4 @@
   background-size: 13px;
   top: 4px;
   left: 5px;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
