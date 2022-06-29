@@ -142,14 +142,20 @@
   font-weight: 700;
   cursor: pointer;
 }
+.newsletter--embedded .newsletter__submit:hover {
+  opacity: 0.95;
+}
 @media screen and (min-width: 768px) {
   .newsletter--embedded .newsletter__submit {
     margin: unset;
   }
 }
 .newsletter--embedded .newsletter__checkbox--info label {
-  padding-left: 0;
+  padding: 10px 10px 10px 0 !important;
   text-decoration: underline;
+}
+.newsletter--embedded .newsletter__checkbox--info label a {
+  color: white;
 }
 .newsletter--embedded .newsletter__checkbox input {
   opacity: 0;
@@ -164,11 +170,13 @@
   opacity: 1;
 }
 .newsletter--embedded .newsletter__checkbox label {
+  align-items: flex-start;
   cursor: pointer;
   color: white;
   padding: 0 0 0 28px;
 }
 .newsletter--embedded .newsletter__checkbox label::before {
+  top: -2px;
   border-radius: 5px;
   background-color: transparent;
   border-color: rgba(255, 255, 255, 0.6);
@@ -179,6 +187,6 @@
   width: 10px;
   height: 11px;
   background-size: 13px;
-  top: 4px;
+  top: 2px;
   left: 5px;
 }/*# sourceMappingURL=styles.css.map */

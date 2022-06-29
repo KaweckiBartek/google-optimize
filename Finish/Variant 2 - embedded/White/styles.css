@@ -144,6 +144,9 @@
   font-weight: 700;
   cursor: pointer;
 }
+.newsletter--embedded .newsletter__submit:hover {
+  opacity: 0.95;
+}
 @media screen and (min-width: 768px) {
   .newsletter--embedded .newsletter__submit {
     margin: unset;
