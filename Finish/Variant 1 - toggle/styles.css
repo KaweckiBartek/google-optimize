@@ -87,6 +87,16 @@
     bottom: -130px;
   }
 }
+.newsletter--popup .success,
+.newsletter--popup .nonsubscriber {
+  text-align: center !important;
+}
+.newsletter--popup .success h3,
+.newsletter--popup .success p,
+.newsletter--popup .nonsubscriber h3,
+.newsletter--popup .nonsubscriber p {
+  text-align: center !important;
+}
 .newsletter--popup__close-button {
   position: absolute;
   right: 16px;

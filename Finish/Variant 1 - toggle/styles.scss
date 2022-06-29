@@ -84,6 +84,15 @@
     }
   }
 
+  .success,
+  .nonsubscriber {
+    text-align: center !important;
+
+    h3,
+    p {
+      text-align: center !important;
+    }
+  }
   &__close-button {
     position: absolute;
     right: 16px;

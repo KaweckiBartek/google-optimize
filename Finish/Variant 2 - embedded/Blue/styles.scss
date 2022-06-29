@@ -34,9 +34,15 @@
 
   .success,
   .nonsubscriber {
+    text-align: center !important;
     h3,
     p {
-      text-align: center;
+      text-align: center !important;
+      font-size: 24;
+
+      @media screen and (min-width: 768px) {
+        font-size: 40;
+      }
     }
   }
 

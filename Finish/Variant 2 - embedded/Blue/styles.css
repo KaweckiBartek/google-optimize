@@ -33,11 +33,24 @@
     padding: 32px 18px;
   }
 }
+.newsletter--embedded .success,
+.newsletter--embedded .nonsubscriber {
+  text-align: center !important;
+}
 .newsletter--embedded .success h3,
 .newsletter--embedded .success p,
 .newsletter--embedded .nonsubscriber h3,
 .newsletter--embedded .nonsubscriber p {
-  text-align: center;
+  text-align: center !important;
+  font-size: 24;
+}
+@media screen and (min-width: 768px) {
+  .newsletter--embedded .success h3,
+.newsletter--embedded .success p,
+.newsletter--embedded .nonsubscriber h3,
+.newsletter--embedded .nonsubscriber p {
+    font-size: 40;
+  }
 }
 .newsletter--embedded .newsletter__image-wrapper {
   display: flex;
