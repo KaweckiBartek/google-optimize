@@ -63,7 +63,18 @@
   border-radius: 20px;
   padding: 18px 9px;
   z-index: 9999;
+  transform-origin: 100% 100%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+
+  @media screen and (max-width: 425px) and (max-height: 818px) {
+    transform: scale(0.7) translateX(50%);
+    width: calc(130% - 20px);
+  }
+
+  @media screen and (min-width: 425px) and (max-height: 775px) {
+    transform: scale(0.8) translateX(50%);
+    width: calc(120% - 20px);
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 448px;
@@ -73,14 +84,10 @@
 
     @media screen and (max-height: 860px) {
       transform: scale(0.8);
-      right: -20px;
-      bottom: -60px;
     }
 
     @media screen and (max-height: 660px) {
       transform: scale(0.6);
-      right: -63px;
-      bottom: -130px;
     }
   }
 
