@@ -8,6 +8,10 @@
   transition: opacity 0.3s linear;
 }
 
+.shopify-section.simple-popup {
+  display: none;
+}
+
 .display-none {
   display: none !important;
 }

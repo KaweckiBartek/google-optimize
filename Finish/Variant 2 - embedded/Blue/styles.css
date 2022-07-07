@@ -12,6 +12,10 @@
   display: none !important;
 }
 
+.shopify-section.simple-popup {
+  display: none;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
